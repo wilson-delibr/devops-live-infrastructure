@@ -3,7 +3,7 @@
 In the cloudshell the bootstrap has installed `terragrunt` binary and also setup the environment variable so you are ready to run terragrunt. If you have lost your initial connection to the cloudshell (and your environment variables)
 
 ```bash
-cd ~/cloudshell_open//devops-live-infrastructure/gce
+cd ~/cloudshell_open/devops-live-infrastructure/gce
 source sourceme.sh
 ````
 
@@ -14,7 +14,7 @@ More information about terragrunt can be found at https://terragrunt.io.
 This repo contains a description (or mapping table) of all resources on gce, it's prepared for you so you only have to run some commands to get a cluster up.
 
 ```bash
-cd ~/cloudshell_open//devops-live-infrastructure/gce/europe-north1/dev/common/kubernetes
+cd ~/cloudshell_open/devops-live-infrastructure/gce/europe-north1/dev/common/kubernetes
 terragrunt apply 
 ```
 

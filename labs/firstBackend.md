@@ -2,11 +2,11 @@
 
 We now have a kubernetes cluster that we can start a `pod` running the image we have created earlier with CircleCI.
 
-We first need to change the file `devops-live-infrastructure/files/firstBackend/pod.yaml` with the full url to image. 
+We first need to change the file `~/cloudshell_open/devops-live-infrastructure/files/firstBackend/pod.yaml` with the full url to image. 
 Then we can create the pod by running (change to full path of the file)
 
 ```
-$ kubectl apply -f devops-live-infrastructure/files/firstBackend/pod.yaml
+$ kubectl apply -f ~/cloudshell_open/devops-live-infrastructure/files/firstBackend/pod.yaml
 TODO add sample output
 $ kubectl get pods # To check that it is started
 $ kubectl describe pod "podname" # to debug
