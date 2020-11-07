@@ -2,9 +2,9 @@
 
 In the cloudshell the bootstrap has installed `terragrunt` binary and also setup the environment variable so you are ready to run terragrunt. If you have lost your initial connection to the cloudshell (and your environment variables)
 
-```
-cd ...
-source 
+```bash
+cd ~/cloudshell_open//devops-live-infrastructure/gce
+source sourceme.sh
 ````
 
 More information about terragrunt can be found at https://terragrunt.io.
@@ -13,8 +13,8 @@ More information about terragrunt can be found at https://terragrunt.io.
 
 This repo contains a description (or mapping table) of all resources on gce, it's prepared for you so you only have to run some commands to get a cluster up.
 
-```
-cd gce/europe-north1/dev/common/kubernetes
+```bash
+cd ~/cloudshell_open//devops-live-infrastructure/gce/europe-north1/dev/common/kubernetes
 terragrunt apply 
 ```
 
@@ -24,7 +24,7 @@ You can now check it out in the Cloud console by going to https://console.cloud.
 
 Select the cluster and click connect to connect to the cluster, copy the command and run it in your cloudshell and check that you can connect to the cluster.
 
-```
+```bash
 $ gcloud container clusters get-credentials gkeeurope-north1prodcommonkubernetes --region europe-north1 --project prepedu-mikael-tf-pr1
 Fetching cluster endpoint and auth data.
 kubeconfig entry generated for gkeeurope-north1prodcommonkubernetes.
