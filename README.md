@@ -1,12 +1,17 @@
 # devops-live-infrastructure
 
-## Required prereq gce_multiple
-### Google Account
-First, register a new account at google with your own email https://accounts.google.com/SignUpWithoutGmail
+Sample project inspired from https://blog.gruntwork.io/how-to-create-reusable-infrastructure-with-terraform-modules-25526d65f73d https://github.com/gruntwork-io/terragrunt-infrastructure-live-example 
+https://medium.com/@kief/https-medium-com-kief-using-pipelines-to-manage-environments-with-infrastructure-as-code-b37285a1cbf5
 
-## GCE account
-Go to: https://cloud.google.com/compute/docs/signup and click on "Try it free" to create a new GCE account, this will require your credit card information although you will not be billed anything.
+and used in devops education labs.
 
-## Running
-### Once
-Use bootstrap/bootstrap.sh to bootstrap your environment. It creates a new google project and ensure that you have everything enabled and installed.
+Instructions are in the MD files in labs, intended to be run from a "Google Cloudshell".
+
+Files contains files that you can use for each step.
+
+## Labs
+
+* [Signup](labs/signup.md)
+* [Bootstrap your cloudshell and project](labs/bootStrap.md)
+* [Create your first kubernetes(k8s) cluster](labs/firstK8s.md)
+* [Run your first service(backend) in the cloud](labs/firstBackend.md)

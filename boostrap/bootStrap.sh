@@ -54,8 +54,8 @@ fi
 
 
 # Creating account config for project
-if [ ! -f ../../gce_edudevops/sourceme.sh ]; then
-cat > ../../gce_edudevops/sourceme.sh <<EOF
+if [ ! -f ../gce/sourceme.sh ]; then
+cat > ../gce/sourceme.sh <<EOF
 #Created by scripts/gce_edudevops/bootstrap.sh
 export GOOGLE_CREDENTIALS="${tf_creds}"
 export GOOGLE_PROJECT="${project_name}"
@@ -65,7 +65,7 @@ export GOOGLE_PROJECT="${project_name}"
 EOF
 fi
 
-source ../../gce_edudevops/sourceme.sh
+source ../gce/sourceme.sh
 
 
 # Creating bucket if needed

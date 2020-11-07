@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: backend
+  labels:
+    system: "realworld"
+    app: "backend"
+spec:
+  containers:
+    - name: backend
+      image: "replace with the full name, example: eu.gcr.io/prepedu-mikael-tf-pr1/devops-realworld-example-backend:8aa9cfa01a052da66fe71b0f2ee49c928c39b6e7"
+      resources:
+        limits:
+          cpu: "0.5"
+          memory: "512Mi"
