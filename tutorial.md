@@ -154,11 +154,15 @@ You can now check it out in the Cloud console by going to https://console.cloud.
 
 Select the cluster and click connect to connect to the cluster, copy the command and run it in your cloudshell and check that you can connect to the cluster.
 
-```bash
+```
 $ gcloud container clusters get-credentials gkeeurope-north1prodcommonkubernetes --region europe-north1 --project prepedu-mikael-tf-pr1
 Fetching cluster endpoint and auth data.
 kubeconfig entry generated for gkeeurope-north1prodcommonkubernetes.
+```
+```bash
 $ kubectl get nodes
+```
+```
 NAME                                                  STATUS   ROLES    AGE     VERSION
 gke-gkeeurope-north1prod-default-pool-00743fed-4djf   Ready    <none>   3h20m   v1.16.13-gke.401
 gke-gkeeurope-north1prod-default-pool-b203d9c7-6tf1   Ready    <none>   3h20m   v1.16.13-gke.401
@@ -174,16 +178,20 @@ We now have a kubernetes cluster that we can start a `pod` running the image we 
 We first need to change the file `~/cloudshell_open/devops-live-infrastructure/files/firstBackend/pod.yaml` with the full url to image. 
 Then we can create the pod by running (change to full path of the file)
 
-```
+```bash
 $ kubectl apply -f ~/cloudshell_open/devops-live-infrastructure/files/firstBackend/pod.yaml
+```
 TODO add sample output
+```bash
 $ kubectl get pods # To check that it is started
+```
+```bash
 $ kubectl describe pod "podname" # to debug
 ```
 
 We now want to connect to the pod running in the cluster, for debug/demo purposes. First we need to connect to the pod from the cloudshell by running:
 
-```
+```bash
 kubectl port-forward pod/pod-name --address 0.0.0.0 8080:5000
 ```
 
