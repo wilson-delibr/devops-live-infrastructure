@@ -10,7 +10,7 @@ project_name="$1-$USER-tf-pr${project_number}"
 tf_creds=~/.config/gcloud/$1-tf-pr${project_number}.json
 gcloud_cmd="gcloud --project $project_name"
 mkdir -p ~/gopath/bin
-terragrunt --version >/dev/null 2>&1 || (echo "terragrunt is required, installing in ~/gopath/bin" ; curl https://github.com/gruntwork-io/terragrunt/releases/download/v0.23.38/terragrunt_linux_amd64 -o ~/gopath/bin/terragrunt; chmod a+x ~/gopath/bin/terragrunt)
+terragrunt --version >/dev/null 2>&1 || (echo "terragrunt is required, installing in ~/gopath/bin" ; curl -L https://github.com/gruntwork-io/terragrunt/releases/download/v0.23.38/terragrunt_linux_amd64 -o ~/gopath/bin/terragrunt; chmod a+x ~/gopath/bin/terragrunt)
 
 
 if ! gcloud projects list | grep $project_name >> /dev/null 
