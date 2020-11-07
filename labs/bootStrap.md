@@ -4,7 +4,7 @@
 
 During the laboration we need somewhere to store our artifacts and run our payload (and tests). This example is using Google Cloud infrastructure for it. 
 
-You need to have a Google Cloud account to run this labs, if you haven't created one, please follow the instructions in signup.md first
+You need to have a Google Cloud account to run this labs, if you haven't created one, please follow the instructions in [Signup](signup.md) first.
 
 ## Let's get started with Google Cloud
 
@@ -12,7 +12,7 @@ To have the possiblity to access Google cloud I need to setup an environment. To
 
 Try running a command now:
 ```bash
-  cd bootstrap/gce_edudevops
+  cd bootstrap
   ./bootstrap.sh prefix suffix
 ```
 
