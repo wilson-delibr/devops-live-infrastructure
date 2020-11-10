@@ -77,7 +77,7 @@ fi
 
 # Print stuff for the Circle CI
 echo Environment variables that need to be added to CircleCI
-echo 'Organization Settings->Context->Create Context->org-global'
+echo 'Organization Settings->Context->Create Context->devopsedu-global'
 echo "GOOGLE_PROJECT_ID = ${project_name}"
 echo "GOOGLE_COMPUTE_ZONE = europe-west1-b"
 echo "GOOGLE_AUTH =  $(base64 -w0 $tf_creds)"
