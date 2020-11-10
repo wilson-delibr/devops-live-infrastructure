@@ -25,13 +25,12 @@ You can now check it out in the Cloud console by going to https://console.cloud.
 Select the cluster and click connect to connect to the cluster, copy the command and run it in your cloudshell and check that you can connect to the cluster.
 
 ```bash
-$ gcloud container clusters get-credentials gkeeurope-north1prodcommonkubernetes --region europe-north1 --project prepedu-mikael-tf-pr1
+miklab4711@cloudshell:~/cloudshell_open/devops-live-infrastructure/gce/europe-north1/dev/common/kubernetes$ gcloud container clusters get-credentials gkeeurope-north1devcommonkubernetes --region europe-north1 --project pref1-miklab4711-tf-prsuf2
 Fetching cluster endpoint and auth data.
-kubeconfig entry generated for gkeeurope-north1prodcommonkubernetes.
-$ kubectl get nodes
-NAME                                                  STATUS   ROLES    AGE     VERSION
-gke-gkeeurope-north1prod-default-pool-00743fed-4djf   Ready    <none>   3h20m   v1.16.13-gke.401
-gke-gkeeurope-north1prod-default-pool-b203d9c7-6tf1   Ready    <none>   3h20m   v1.16.13-gke.401
-gke-gkeeurope-north1prod-default-pool-ea3ebcd2-w122   Ready    <none>   3h20m   v1.16.13-gke.401
-$
+kubeconfig entry generated for gkeeurope-north1devcommonkubernetes.
+miklab4711@cloudshell:~/cloudshell_open/devops-live-infrastructure/gce/europe-north1/dev/common/kubernetes$ kubectl get nodes
+NAME                                                  STATUS   ROLES    AGE   VERSION
+gke-gkeeurope-north1devc-default-pool-4ef9e2aa-h1v6   Ready    <none>   64s   v1.16.13-gke.401
+gke-gkeeurope-north1devc-default-pool-91a85f2f-4h0h   Ready    <none>   64s   v1.16.13-gke.401
+gke-gkeeurope-north1devc-default-pool-a161d316-dkcq   Ready    <none>   64s   v1.16.13-gke.401
 ```
