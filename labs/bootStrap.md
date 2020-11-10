@@ -22,6 +22,7 @@ Try running a command now:
 
 When the script runs it will bootstrap the project on google cloud we are going to use during the education. 
 It has enabled some functionality on the project and will output some variables that we will use in the next step.
+This command takes some minutes to run.
 
 
 ## Let's use a Container registry to store our artefacts
@@ -43,14 +44,14 @@ GOOGLE_COMPUTE_ZONE = europe-west1-b
 GOOGLE_AUTH =  ewogICJ0eXBl...0LmNvbSIKfQo=
 ```
 
-Add the variables in Organization Settings->Context->Create Context->devopsedu-global. 
+Add the variables in Organization Settings->Context->Create Context->devopsedu-global. Be careful when you copy the GOOGLE_AUTH line so you get the full line, it's easy to miss some of the line in the output.
 
 The reason to create a context is to make the variables reusable ower multiple pipelines in CircleCI. In a an organisation it's often the "Ops" that is responsible for creating this "context".
 
 
 ### How to use the Context in CircleCI
 
-In Circle we need to change the workflow to have the possibility to use the "Context".
+In Circle we need to change the workflow to have the possibility to use the "Context". Go to Github.com, find your fork of the devops-realworld-example-backend repo, go to .circleci and edit the config.yml change change the content to the snippet below:
 
 ```
 version: 2.1
@@ -70,7 +71,7 @@ jobs:
       - run: docker build -t company/app:$CIRCLE_BRANCH .
 ```
 
-Run the pipeline and verify that you can see that the environment variables have been set.
+The pipeline will now run with the new configuration. Verify that you can see that the environment variables have been set in the "Checking environment" step.
 
 
 ### Authorize to gCloud and push the image
@@ -102,6 +103,16 @@ jobs:
       - run: gcloud docker -- push eu.gcr.io/${GOOGLE_PROJECT_ID}/${CIRCLE_PROJECT_REPONAME}:$CIRCLE_SHA1 
 ```
 
-After you have run the pipeline in Circle CI, you can now verify that the container is uploaded to the "Container registry" service. Make note of the Container url, you will need it later. 
+After you have run the pipeline in Circle CI, you can now verify that the container is uploaded to the "Container registry" service at https://console.cloud.google.com/ and search for "Container Registry", you may need to select the newly created project with "prefix-tf-suffix".
 
 If you have the possiblity, you can try to start the image on your computer.
+
+```
+$ gcloud auth login
+$ gcloud auth configure-docker
+$ docker run -p 5000:5000 eu.gcr.io/pref1-miklab4711-tf-prsuf2/devops-realworld-example-backend@sha256:8017f19c69dce481feca2c81c988b852959b1aa0ff981e863faf7c93c2dae58e
+```
+
+Open your webbrowser to:
+
+http://localhost:5000/swagger/
