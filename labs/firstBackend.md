@@ -23,7 +23,7 @@ We now want to connect to the pod running in the cluster, for debug/demo purpose
 kubectl port-forward pod/backend --address 0.0.0.0 8080:5000
 ```
 
-That command is connecting the port 5000 on the pod to port 8080 on the cloudshell, after that we can start "Webpreview" in the cloudshell and your browser open a port simular to:
+That command is connecting the port 5000 on the pod to port 8080 on the cloudshell, after that we can start "Webpreview" (up in the right corner) in the cloudshell and your browser open a port simular to:
 
 https://8080-cs-1042207630036-default.europe-west4.cloudshell.dev/?auth#TODO
 
