@@ -15,3 +15,6 @@ Files contains files that you can use for each step.
 * [Bootstrap your cloudshell and project](labs/bootStrap.md)
 * [Create your first kubernetes(k8s) cluster](labs/firstK8s.md)
 * [Run your first service(backend) in the cloud](labs/firstBackend.md)
+* [Setup fast test env](labs/fast.md)
+* [Setup prod](labs/prod.md)
+* [Setup Uat](labs/uat.md)
