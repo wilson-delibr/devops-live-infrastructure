@@ -1,4 +1,4 @@
-# Create a prod environment.
+# Create a prod environment
 
 If you have lost your initial connection to the cloudshell (and your environment variables)
 
@@ -9,7 +9,7 @@ source sourceme.sh
 
 ## Prepare the live-infrastructure
 
-First we need to update the live-infrastructure so it has an uat environment, either you can merge the "addUat branch in live-infrastructure repo or copy part of the the "dev" environment. We are going to reuse the dev k8s cluster. 
+First we need to update the live-infrastructure so it has an uat environment, either you can merge the "addUat branch in live-infrastructure repo or copy part of the the "dev" environment. We are going to reuse the dev k8s cluster.
 
 The following is a sample on how you can copy it, but you also need to have registrerd an SSH key on github to have the possiblity to push it there.
 
@@ -27,8 +27,7 @@ We now need to update part of the pipeline to add an uat steps and also and apro
 
 In the pipeline we need to first change the workflow for adding the stages:
 
-
-```
+```yaml
 version: 2.1
 workflows:
   build-and-push:

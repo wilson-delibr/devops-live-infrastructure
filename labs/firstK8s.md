@@ -7,7 +7,7 @@ cd ~/cloudshell_open/devops-live-infrastructure/gce
 source sourceme.sh
 ````
 
-More information about terragrunt can be found at https://terragrunt.io.
+More information about terragrunt can be found at [Terragrunt](https://terragrunt.io).
 
 ## Create the first kubernetes cluster
 
@@ -15,12 +15,12 @@ This repo contains a description (or mapping table) of all resources on gce, it'
 
 ```bash
 cd ~/cloudshell_open/devops-live-infrastructure/gce/europe-north1/dev/common/kubernetes
-terragrunt apply 
+terragrunt apply
 ```
 
-The terragrunt apply command will show you what it intend to do, check the output and answer "yes" if it feels ok. After around 3-4 minutes you will have a kubernetes cluster up and running. 
+The terragrunt apply command will show you what it intend to do, check the output and answer "yes" if it feels ok. After around 3-4 minutes you will have a kubernetes cluster up and running.
 
-You can now check it out in the Cloud console by going to https://console.cloud.google.com/kubernetes/list
+You can now check it out in the [Cloud console](https://console.cloud.google.com/kubernetes/list)
 
 Select the cluster and click connect to connect to the cluster, copy the command and run it in your cloudshell and check that you can connect to the cluster.
 

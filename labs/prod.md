@@ -1,4 +1,4 @@
-# Create a prod environment.
+# Create a prod environment
 
 If you have lost your initial connection to the cloudshell (and your environment variables)
 
@@ -11,7 +11,7 @@ source sourceme.sh
 
 ### Prepare the live-infrastructure
 
-First we need to update the live-infrastructure so it has an prod environment, either you can merge the "addProd" branch in live-infrastructure repo or copy the "dev" environment. We run the prod environment in another GKE zone so we doesn't get out of quota. 
+First we need to update the live-infrastructure so it has an prod environment, either you can merge the "addProd" branch in live-infrastructure repo or copy the "dev" environment. We run the prod environment in another GKE zone so we doesn't get out of quota.
 The following is a sample on how you can copy it, but you also need to have registrerd an SSH key on github to have the possiblity to push it there.
 
 ```bash
@@ -35,23 +35,23 @@ git push
 ```
 
 If you have done the merge in github you need to update your local filetree with something like this.
+
 ```bash
 cd ~/cloudshell_open/devops-live-infrastructure/
 git fetch
 git rebase
 ```
 
-
-### Create the prod kubernetes cluster
+### Use terragrunt to create the prod kubernetes cluster
 
 ```bash
 cd ~/cloudshell_open/devops-live-infrastructure/gce/europe-west1/prod/common/kubernetes
-terragrunt apply 
+terragrunt apply
 ```
 
-The terragrunt apply command will show you what it intend to do, check the output and answer "yes" if it feels ok. After around 3-4 minutes you will have a kubernetes cluster up and running. 
+The terragrunt apply command will show you what it intend to do, check the output and answer "yes" if it feels ok. After around 3-4 minutes you will have a kubernetes cluster up and running.
 
-You can now check it out in the Cloud console by going to https://console.cloud.google.com/kubernetes/list
+You can now check it out in the [Cloud console](https://console.cloud.google.com/kubernetes/list)
 
 ## The pipelines
 
@@ -59,8 +59,7 @@ We now need to update part of the pipeline to add the production steps, the file
 
 In the pipeline we need to first change the workflow for adding the prod stage:
 
-
-```
+```yaml
 version: 2.1
 workflows:
   build-and-push:
