@@ -1,10 +1,7 @@
 # devops-live-infrastructure
 
-Sample project inspired from
-
-* [How to create reusable infrastructure](https://blog.gruntwork.io/how-to-create-reusable-infrastructure-with-terraform-modules-25526d65f73d)
-* [sample gitrepo](https://github.com/gruntwork-io/terragrunt-infrastructure-live-example)
-* [How to maintain environments with pipelines](https-medium-com-kief-using-pipelines-to-manage-environments-with-infrastructure-as-code-b37285a1cbf5)
+Sample project inspired from https://blog.gruntwork.io/how-to-create-reusable-infrastructure-with-terraform-modules-25526d65f73d https://github.com/gruntwork-io/terragrunt-infrastructure-live-example 
+https://medium.com/@kief/https-medium-com-kief-using-pipelines-to-manage-environments-with-infrastructure-as-code-b37285a1cbf5
 
 and used in devops education labs.
 
