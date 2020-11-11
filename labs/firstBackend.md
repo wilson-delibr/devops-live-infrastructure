@@ -2,10 +2,10 @@
 
 We now have a kubernetes cluster that we can start a `pod` running the image we have created earlier with CircleCI.
 
-We first need to change the file `~/cloudshell_open/devops-live-infrastructure/files/firstBackend/pod.yaml` with the full url to image. 
+We first need to change the file `~/cloudshell_open/devops-live-infrastructure/files/firstBackend/pod.yaml` with the full url to image.
 Then we can create the pod by running (change to full path of the file)
 
-```
+```bash
 $ kubectl apply -f ~/cloudshell_open/devops-live-infrastructure/files/firstBackend/pod.yaml
 pod/backend created
 $ kubectl get pods
@@ -19,7 +19,7 @@ $ kubectl describe pod backend # to debug
 
 We now want to connect to the pod running in the cluster, for debug/demo purposes. First we need to connect to the pod from the cloudshell by running:
 
-```
+```bash
 kubectl port-forward pod/backend --address 0.0.0.0 8080:5000
 ```
 
@@ -30,4 +30,3 @@ https://8080-cs-1042207630036-default.europe-west4.cloudshell.dev/?auth#TODO
 Replace the last part to "/swagger/", example:
 
 https://8080-cs-1042207630036-default.europe-west4.cloudshell.dev/swagger/ and you get into the pod. Now you can use the "swagger" interface to try out the application.
-
