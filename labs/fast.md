@@ -2,6 +2,12 @@
 
 The live-infrastructure repo is already prepared with the configuration for a test environment (gce/europe-north1/dev/realworld-backend/fast)
 
+## Give CircleCI permission
+
+Circle Ci need to have permission to update another repo, the live-infrastructure repo. To get it working go to:
+
+https://app.circleci.com/ -> Projects -> devops-realworld-example-backend -> Project Settings -> SSH Keys -> Add a user key, and verify that it's added in your github account.
+
 ## The pipelines
 
 We now need to update part of the pipeline to add the deployment to this environment, Copy the following file to the .circleci
