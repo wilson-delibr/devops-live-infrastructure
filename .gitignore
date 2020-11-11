@@ -1,0 +1,44 @@
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+#Temporary rewrite
+*.tfbak
+
+# Don't add secrets
+#secret.tfvars
+*secret.tfvars
+
+# Don't add ssh keys
+id_rsa
+
+# Don't add rc files for openstack credentials
+*.rc
+
+# Terragrunt cache dirs
+**/.terragrunt-cache/*
+
+# Emacs samples
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Don't add mac internal
+.DS_Store
+
+# Don't add sourceme files (local settings)
+sourceme*.sh
+# Remove .bak
+*.bak
+
+#Ignore generated files
+**/generated-files/*
+**/tfplan.json
