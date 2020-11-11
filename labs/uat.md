@@ -39,14 +39,28 @@ workflows:
           context: devopsedu-global
           requires:
             - build
-      - prod:
+      - uat:
           context: devopsedu-global
           requires:
             - fast_test
+      - approve_production:
+          type: approval
+          filters:
+            branches:
+              only: master
+          requires:
+              - uat
+      - prod:
+          context: devopsedu-global
+          requires:
+            - approve_production
 ```
 
-Then make a copy of the fast_test steps and name it prod, change every occurence of: "devops-live-infrastructure/gce/europe-north1/dev/realworld-backend/fast" to "devops-live-infrastructure/gce/europe-west1/prod/realworld-backend/prod".
+Then make a copy of the fast_test steps and name it uat, change every occurence of: "devops-live-infrastructure/gce/europe-north1/dev/realworld-backend/fast" to "devops-live-infrastructure/gce/europe-north1/dev/realworld-backend/uat".
 
-Run the change and see if you get it deployed to production, the production environment takes longer time beacuse it also use an external database. In a line in the end it outputs what public IP you get, and you can use that for reaching the service.
+Run the change and see if you get it deployed to uat.
+In a line in the end it outputs what public IP you get, and you can use that for reaching the service.
 
 For example if you get 'external_ip = 104.199.3.29' you can reach the swagger interface at: "http://104.199.3.29/swagger"
+
+After you have verified the "functionality" you can approve the deploy to production.
