@@ -17,8 +17,6 @@ Try running a command now:
   ./bootstrap.sh prefix suffix
 ```
 
-**Tip**: Click the copy button on the side of the code box and paste the command in the Cloud Shell terminal to run it.
-
 **Replace prefix and digit with to make the project unique.**
 
 When the script runs it will bootstrap the project on google cloud we are going to use during the education.
