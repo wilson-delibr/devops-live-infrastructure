@@ -101,7 +101,7 @@ jobs:
 
 After you have run the pipeline in Circle CI, you can now verify that the container is uploaded to the "Container registry" service at [Console](https://console.cloud.google.com/) and search for "Container Registry", you may need to select the newly created project with "prefix-tf-suffix".
 
-If you have the possiblity (Docker installed), you can try to start the image on your computer.
+If you have Docker installed you can try to start the image on your computer.
 
 ```bash
 gcloud auth login
