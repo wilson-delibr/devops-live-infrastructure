@@ -6,7 +6,7 @@ set -e
     fi
 project_prefix=$1
 project_number=$2
-project_name="$1-$USER-tf-pr${project_number}"
+project_name="$1-wilson-tf-pr${project_number}"
 tf_creds=~/.config/gcloud/$1-tf-pr${project_number}.json
 gcloud_cmd="gcloud --project $project_name"
 mkdir -p ~/gopath/bin
